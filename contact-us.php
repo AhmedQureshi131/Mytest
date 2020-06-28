@@ -80,23 +80,7 @@ $error="Something went wrong. Please try again";
 <?php include('includes/header.php');?>
 <!-- /Header --> 
 
-<!--Page Header-->
-<section class="page-header contactus_page">
-  <div class="container">
-    <div class="page-header_wrap">
-      <div class="page-heading">
-        <h1>Contact Us</h1>
-      </div>
-      <ul class="coustom-breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li>Contact Us</li>
-      </ul>
-    </div>
-  </div>
-  <!-- Dark Overlay-->
-  <div class="dark-overlay"></div>
-</section>
-<!-- /Page Header--> 
+
 
 <!--Contact-us-->
 <section class="contact_us section-padding">
