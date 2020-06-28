@@ -1,38 +1,18 @@
 
 <header>
-  <div class="default-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-2">
-          <div class="logo"> <a href="index.php"><img src="assets/images/logg.png" alt="image"/></a> </div>
-        </div>
-        <div class="col-sm-9 col-md-10">
-          <div class="header_info">
-            <div class="header_widgets">
-              <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">For Support Mail us : </p>
-              <a href="mailto:info@example.com">	saphura@gratistech.com</a> </div>
-            <div class="header_widgets">
-              <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-              <p class="uppercase_text">Service Helpline Call Us: </p>
-              <a href="tel:61-1234-5678-09">(423) 745-1962</a> </div>
-            <div class="social-follow">
-              
-            </div>
+  
    <?php   if(strlen($_SESSION['login'])==0)
 	{
+    //do something but it's not required in the test so i am just leaving this as blank. 
+    //Otherwise I was redirecting it to the login page.
+    //like this header('Location: login.php');
 ?>
- <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
 <?php }
 else{
 
 echo "Welcome To Auto Wall";
  } ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+         
 
   <!-- Navigation -->
   <nav id="navigation_bar" class="navbar navbar-default">
