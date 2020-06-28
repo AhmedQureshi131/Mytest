@@ -10,7 +10,8 @@
 <?php }
 else{
 
-echo "Welcome To Auto Wall";
+    //here the location will be index.php, but it is not proper website so I add different functionalities.
+    //In order to complete the test.
  } ?>
          
 
