@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 28, 2020 at 05:08 AM
+-- Generation Time: Jun 28, 2020 at 07:28 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -68,7 +68,8 @@ INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALU
 (2, 'BMW', '2020-06-27 16:24:50', '2020-06-28 01:22:31'),
 (3, 'Audi', '2020-06-27 16:25:03', '2020-06-28 01:22:56'),
 (4, 'Nissan', '2020-06-27 16:25:13', '2020-06-28 01:23:17'),
-(5, 'Toyota', '2020-06-27 16:25:24', '2020-06-28 01:23:38');
+(5, 'Toyota', '2020-06-27 16:25:24', '2020-06-28 01:23:38'),
+(8, 'Ford', '2020-06-28 17:19:07', '2020-06-28 12:19:18');
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,8 @@ CREATE TABLE `tblvehicles` (
 --
 
 INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
-(4, 'Swift Sport', 1, 'Trust us, the rendering looks every bit possible and if Suzuki want to go ahead with a Swift Sport 2-seat, 2-door Convertible Roadster, we will be more than happy to have a look at the real thing in metal. X-Tomi has used the newly unveiled BMW Z4 at the Pebble Beach Concours d’Elegance during the Monterey Car Week as the base for his imagination.', 300, 'CNG', 2020, 5, 'featured-img-3.jpg', 'featured-img-1.jpg', 'featured-img-1.jpg', 'featured-img-1.jpg', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, '2020-06-27 16:18:43', '2020-06-28 01:45:23');
+(4, 'Swift Sport', 1, 'Trust us, the rendering looks every bit possible and if Suzuki want to go ahead with a Swift Sport 2-seat, 2-door Convertible Roadster, we will be more than happy to have a look at the real thing in metal. X-Tomi has used the newly unveiled BMW Z4 at the Pebble Beach Concours d’Elegance during the Monterey Car Week as the base for his imagination.', 300, 'CNG', 2020, 5, 'featured-img-3.jpg', 'featured-img-1.jpg', 'featured-img-1.jpg', 'featured-img-1.jpg', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, '2020-06-27 16:18:43', '2020-06-28 01:45:23'),
+(6, 'Mustang', 8, 'Price includes: $1000 - Special Package Retail Bonus Cash. Exp. 07/06/2020 $750 - Retail Customer Cash. Exp. 07/06/2020', 350, '2.3L EcoBoost® Engine', 2020, 4, 'featured-img-4.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, NULL, '2020-06-28 17:23:12', '2020-06-28 17:23:59');
 
 --
 -- Indexes for dumped tables
@@ -264,7 +266,7 @@ ALTER TABLE `tblbooking`
 -- AUTO_INCREMENT for table `tblbrands`
 --
 ALTER TABLE `tblbrands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tblcontactusinfo`
@@ -294,7 +296,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblvehicles`
 --
 ALTER TABLE `tblvehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
