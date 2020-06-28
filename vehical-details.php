@@ -42,7 +42,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>Car Rental | Vehicle Details</title>
+<title>Vehicle Details</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -50,8 +50,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <!--OWL Carousel slider-->
 <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
 <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
-<!--slick-slider -->
-<link href="assets/css/slick.css" rel="stylesheet">
+
 <!--bootstrap-slider -->
 <link href="assets/css/bootstrap-slider.min.css" rel="stylesheet">
 <!--FontAwesome Font Style -->
@@ -114,7 +113,7 @@ $_SESSION['brndid']=$result->bid;
       </div>
       <div class="col-md-3">
         <div class="price_info">
-          <p>$<?php echo htmlentities($result->PricePerDay);?> </p>Per Day
+          <p>$<?php echo htmlentities($result->PricePerDay);?> </p>SubTotal
          
         </div>
       </div>
@@ -417,8 +416,7 @@ foreach($results as $result)
 <script src="assets/js/interface.js"></script> 
 <script src="assets/switcher/js/switcher.js"></script>
 <script src="assets/js/bootstrap-slider.min.js"></script> 
-<script src="assets/js/slick.min.js"></script> 
-<script src="assets/js/owl.carousel.min.js"></script>
+
 
 </body>
 </html>
