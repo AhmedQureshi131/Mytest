@@ -318,7 +318,7 @@ $_SESSION['brndid']=$result->bid;
         </div>
         <div class="sidebar_widget">
           <div class="widget_heading">
-            <h5><i class="fa fa-envelope" aria-hidden="true"></i>Book Now</h5>
+            <h5><i class="fa fa-envelope" aria-hidden="true"></i>Hurry Up!! Book Now</h5>
           </div>
           <form method="post">
             <div class="form-group">
