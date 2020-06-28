@@ -95,7 +95,7 @@ $_SESSION['brndid']=$result->bid;
   
   <?php if($result->Vimage5=="")
 {
-
+     
 } else {
   ?>
   <div><img src="assets/img/vehicleimages/<?php echo htmlentities($result->Vimage5);?>" class="img-responsive" alt="image" width="900" height="560"></div>
