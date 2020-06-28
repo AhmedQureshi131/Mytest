@@ -132,9 +132,9 @@ foreach($results as $result)
         <div class="profile_wrap">
 <form name="chngpwd" method="post" onSubmit="return valid();">
         
-            <div class="gray-bg field-title">
+            
               <h6>Update password</h6>
-            </div>
+          
              <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
         else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
             <div class="form-group">
