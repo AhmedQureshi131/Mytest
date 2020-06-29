@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 28, 2020 at 07:28 PM
+-- Generation Time: Jun 29, 2020 at 03:51 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -33,18 +33,18 @@ CREATE TABLE `tblbooking` (
   `userEmail` varchar(100) DEFAULT NULL,
   `VehicleId` int(11) DEFAULT NULL,
   `FromDate` varchar(20) DEFAULT NULL,
-  `ToDate` varchar(20) DEFAULT NULL,
-  `message` varchar(255) DEFAULT NULL,
   `Status` int(11) DEFAULT NULL,
-  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp()
+  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ToDate` varchar(20) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblbooking`
 --
 
-INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`) VALUES
-(5, 'axq0267@gmail.com', 4, '06/28/2020', '07/01/2020', 'Hi. I want to book this car. Could you please let me know asap?', 0, '2020-06-28 00:59:01');
+INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `Status`, `PostingDate`, `ToDate`, `message`) VALUES
+(10, 'axq0267@gmail.com', 9, '06/28/2020', 0, '2020-06-29 01:20:34', NULL, '6:30pm');
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,6 @@ CREATE TABLE `tblbrands` (
 --
 
 INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALUES
-(1, 'Maruti', '2020-06-27 16:24:34', '2020-06-28 00:48:14'),
 (2, 'BMW', '2020-06-27 16:24:50', '2020-06-28 01:22:31'),
 (3, 'Audi', '2020-06-27 16:25:03', '2020-06-28 01:22:56'),
 (4, 'Nissan', '2020-06-27 16:25:13', '2020-06-28 01:23:17'),
@@ -203,8 +202,12 @@ CREATE TABLE `tblvehicles` (
 --
 
 INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
-(4, 'Swift Sport', 1, 'Trust us, the rendering looks every bit possible and if Suzuki want to go ahead with a Swift Sport 2-seat, 2-door Convertible Roadster, we will be more than happy to have a look at the real thing in metal. X-Tomi has used the newly unveiled BMW Z4 at the Pebble Beach Concours d’Elegance during the Monterey Car Week as the base for his imagination.', 300, 'CNG', 2020, 5, 'featured-img-3.jpg', 'featured-img-1.jpg', 'featured-img-1.jpg', 'featured-img-1.jpg', '', 1, 1, 1, 1, 1, 1, 1, 1, 1, NULL, NULL, NULL, '2020-06-27 16:18:43', '2020-06-28 01:45:23'),
-(6, 'Mustang', 8, 'Price includes: $1000 - Special Package Retail Bonus Cash. Exp. 07/06/2020 $750 - Retail Customer Cash. Exp. 07/06/2020', 350, '2.3L EcoBoost® Engine', 2020, 4, 'featured-img-4.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, NULL, '2020-06-28 17:23:12', '2020-06-28 17:23:59');
+(1, '5 Series', 2, 'For decades, the 5 Series has been a standard-bearer for midsize sport luxury sedans. But as cars have gotten bigger, heavier and packed with more technology, there\'s been pressure to provide more efficiency, more comfort and more performance all at the same time. It\'s fair to say the BMW 5 Series\' talents have been stretched a bit thin by the pressure of meeting so many different demands.\r\n\r\n', 53900, 'Gasoline', 2020, 5, 'featured-img-9.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2020-06-29 00:43:06', '2020-06-29 00:46:28'),
+(6, 'Mustang', 8, 'Exterior:\r\nAutolamp Fully Automatic Projector Beam Led Low/High Beam Daytime Running Headlamps w/Delay-Off\r\nBlack Grille\r\nBlack Side Windows Trim\r\nBody-Colored Door Handles\r\nBody-Colored Front Bumper\r\nBody-Colored Power Side Mirrors w/Convex Spotter and Manual Folding\r\nBody-Colored Rear Bumper\r\nClearcoat Paint\r\nFixed Rear Window w/Defroster\r\nGalvanized Steel/Aluminum Panels\r\nLED Brakelights\r\nLight Tinted Glass\r\nPerimeter/Approach Lights\r\nSpare Tire Mobility Kit\r\nSpeed Sensitive Variable Intermittent Wipers\r\nTires: P235/55R17 BSW AS\r\nTrunk Rear Cargo Access\r\nWheels w/Locks\r\nWheels: 17\" Sparkle Silver-Painted Aluminum\r\n\r\nInterior:\r\n2 12V DC Power Outlets\r\n2 LCD Monitors In The Front\r\n4-Way Passenger Seat -inc: Manual Rear Seat Easy Entry\r\n50-50 Folding Bench Front Facing Fold Forward Seatback Cloth Rear Seat\r\n6-Way Driver Seat\r\nAdjustable Rear Head Restraints\r\nAir Filtration\r\nAnalog Display\r\nCargo Features -inc: Spare Tire Mobility Kit\r\nCargo Space Lights\r\nCarpet Floor Trim and Carpet Trunk Lid/Rear Cargo Door Trim\r\nCloth Bucket Seats -inc: 4-way manual driver and 2-way manual passenger, driver memory recline and 4-way adjustable front head restraints\r\nCompass\r\nCruise Control w/Steering Wheel Controls\r\nDay-Night Auto-Dimming Rearview Mirror\r\nDelayed Accessory Power\r\nDriver And Passenger Door Bins\r\nDriver And Passenger Visor Vanity Mirrors w/Driver And Passenger Illumination\r\nDriver Foot Rest\r\nFade-To-Off Interior Lighting\r\nFixed Antenna\r\nFixed Rear Windows\r\nFront Center Armrest\r\nFront Cupholder\r\nFront Map Lights\r\nFull Carpet Floor Covering -inc: Carpet Front Floor Mats\r\nFull Cloth Headliner\r\nFull Floor Console w/Covered Storage, Mini Overhead Console w/Storage and 2 12V DC Power Outlets\r\nIlluminated Locking Glove Box\r\nInterior Trim -inc: Simulated Carbon Fiber Instrument Panel Insert and Chrome Interior Accents\r\nLeather/Aluminum Gear Shifter Material', 35000, '2.3L EcoBoost® Engine', 2020, 4, 'featured-img-4.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, NULL, '2020-06-28 17:23:12', '2020-06-28 18:31:43'),
+(7, 'Fusion', 8, 'Rotary Gear Shift Dial\r\nFloor Mats (1st Row)\r\nFront Center Console with Fixed Armrest and Two Cupholders\r\nRear Center Armrest with Two Cupholders\r\nIntegrated Front Door Storage\r\nPower Door Locks\r\nIntermittent/Speed Sensitive Wipers\r\nRain-Sensing Wipers\r\nBLIS® (Blind Spot Information System) with Cross-Traffic Alert\r\nLane-Keeping System\r\nHill Start Assist\r\nRemote Decklid Release\r\nDual Illuminated Visor Mirrors\r\nDome Lamp and Map Lights', 32000, 'Gasoline', 2020, 5, 'featured-img-5.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, NULL, 1, 1, NULL, '2020-06-29 00:07:24', '2020-06-29 00:18:17'),
+(8, 'A4 Sedan', 3, 'The design of the Audi A4 Sedan delivers more than a powerful response—it shows your deep desire to give intelligence a smart look.\r\n\r\n', 34700, 'Gasoline', 2020, 5, 'featured-img-6.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2020-06-29 00:16:54', '2020-06-29 00:17:48'),
+(9, 'Q3 Sportback, Jaguar XE SV', 3, 'The new Audi Q3 Sportback is the sleeker \"coupe\" version of the regular Q3. It has a lower roofline with a raked rear hatch and is around half an inch longer than the standard Q3.', 34700, 'Gasoline', 2020, 5, 'featured-img-7.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2020-06-29 00:23:32', '2020-06-29 01:46:40'),
+(10, '3 Series', 2, 'An exceptional 2.0-liter four-cylinder engine powers the 2020 BMW 330i. It\'s remarkably smooth, fitted with a single turbocharger, and it makes 255 horsepower. ... Instead, every 2020 BMW 3-series gets an eight-speed automatic transmission with Sport mode as well as Manual mode.', 40750, 'Gasoline', 2020, 5, 'featured-img-8.jpg', NULL, NULL, NULL, NULL, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2020-06-29 00:31:32', '2020-06-29 01:40:29');
 
 --
 -- Indexes for dumped tables
@@ -260,7 +263,7 @@ ALTER TABLE `tblvehicles`
 -- AUTO_INCREMENT for table `tblbooking`
 --
 ALTER TABLE `tblbooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `tblbrands`
@@ -296,7 +299,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `tblvehicles`
 --
 ALTER TABLE `tblvehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
