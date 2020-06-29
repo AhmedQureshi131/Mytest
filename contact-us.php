@@ -136,11 +136,11 @@ foreach($results as $result)
             </li>
             <li>
               <div class="icon_wrap"><i class="fa fa-phone" aria-hidden="true"></i></div>
-              <div class="contact_info_m"><a href="#"><?php   echo htmlentities($result->EmailId); ?></a></div>
+              <div class="contact_info_m"><a href="#"><?php   echo htmlentities($result->ContactNo); ?></a></div>
             </li>
             <li>
               <div class="icon_wrap"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
-              <div class="contact_info_m"><a href="#"><?php   echo htmlentities($result->ContactNo); ?></a></div>
+              <div class="contact_info_m"><a href="#"><?php   echo htmlentities($result->EmailId); ?></a></div>
             </li>
           </ul>
         <?php }} ?>

@@ -66,15 +66,12 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 </head>
 <body>
 
-<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->  
+ 
 
 <!--Header-->
 <?php include('includes/header.php');?>
 <!-- /Header --> 
 
-<!--Listing-Image-Slider-->
 
 <?php 
 $vhid=intval($_GET['vhid']);
@@ -101,7 +98,6 @@ $_SESSION['brndid']=$result->bid;
   <div><img src="assets/img/vehicleimages/<?php echo htmlentities($result->Vimage5);?>" class="img-responsive" alt="image" width="900" height="560"></div>
   <?php } ?>
 </section>
-<!--/Listing-Image-Slider-->
 
 
 <!--Listing-detail-->
@@ -318,18 +314,15 @@ $_SESSION['brndid']=$result->bid;
         </div>
         <div class="sidebar_widget">
           <div class="widget_heading">
-            <h5><i class="fa fa-envelope" aria-hidden="true"></i>Hurry Up!! Book Now</h5>
+            <h5><i class="fa fa-envelope" aria-hidden="true"></i>Test Drive? Hurry Up!! Book Now</h5>
           </div>
           <form method="post">
             <div class="form-group">
-              <input type="text" class="form-control" name="fromdate" placeholder="From Date(dd/mm/yyyy)" required>
+              <input type="text" class="form-control" name="fromdate" placeholder="Pick a Date(dd/mm/yyyy)" required>
+              <input type="text" class="form-control" name="message" placeholder="Availability" required>
             </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="todate" placeholder="To Date(dd/mm/yyyy)" required>
-            </div>
-            <div class="form-group">
-              <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
-            </div>
+           
+   
           <?php if($_SESSION['login'])
               {?>
               <div class="form-group">
@@ -414,7 +407,6 @@ foreach($results as $result)
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script> 
 <script src="assets/js/interface.js"></script> 
-<script src="assets/switcher/js/switcher.js"></script>
 <script src="assets/js/bootstrap-slider.min.js"></script> 
 
 

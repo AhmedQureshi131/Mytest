@@ -21,7 +21,7 @@ $chngpwd1->execute();
 echo "<script>alert('Your Password succesfully changed');</script>";
 }
 else {
-echo "<script>alert('Email id or Mobile no is invalid');</script>"; 
+  //Nothing for now
 }
 }
 

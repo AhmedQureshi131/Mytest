@@ -65,7 +65,7 @@ foreach($results as $result)
 
       <div class="dealer_info">
         <h5><?php echo htmlentities($result->FullName);?></h5>
-        <p><?php echo htmlentities($result->Address);?><br>
+       
           <?php echo htmlentities($result->City);?>&nbsp;<?php echo htmlentities($result->Country); }}?></p>
       </div>
     </div>
@@ -80,7 +80,7 @@ foreach($results as $result)
             <ul class="vehicle_listing">
 <?php
 $useremail=$_SESSION['login'];
- $sql = "SELECT tblvehicles.Vimage1 as Vimage1,tblvehicles.VehiclesTitle,tblvehicles.id as vid,tblbrands.BrandName,tblbooking.FromDate,tblbooking.ToDate,tblbooking.message,tblbooking.Status  from tblbooking join tblvehicles on tblbooking.VehicleId=tblvehicles.id join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblbooking.userEmail=:useremail";
+ $sql = "SELECT tblvehicles.Vimage1 as Vimage1,tblvehicles.VehiclesTitle,tblvehicles.id as vid,tblbrands.BrandName,tblbooking.FromDate,tblbooking.Status  from tblbooking join tblvehicles on tblbooking.VehicleId=tblvehicles.id join tblbrands on tblbrands.id=tblvehicles.VehiclesBrand where tblbooking.userEmail=:useremail";
 $query = $dbh -> prepare($sql);
 $query-> bindParam(':useremail', $useremail, PDO::PARAM_STR);
 $query->execute();
@@ -92,10 +92,10 @@ foreach($results as $result)
 {  ?>
 
 <li>
-                <div class="vehicle_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid);?>""><img src="assets/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" alt="image"></a> </div>
+                <div class="vehicle_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid);?>""><img src="assets/img/vehicleimages/<?php echo htmlentities($result->Vimage1);?>" class="img-responsive" alt="image"></a> </div>
                 <div class="vehicle_title">
                   <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid);?>""> <?php echo htmlentities($result->BrandName);?> , <?php echo htmlentities($result->VehiclesTitle);?></a></h6>
-                  <p><b>From Date:</b> <?php echo htmlentities($result->FromDate);?><br /> <b>To Date:</b> <?php echo htmlentities($result->ToDate);?></p>
+                  <p><b>On Date:</b> <?php echo htmlentities($result->FromDate);?><br /> </p>
                 </div>
                 <?php if($result->Status==1)
                 { ?>
@@ -111,11 +111,10 @@ foreach($results as $result)
 
 
                 <?php } else { ?>
- <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Not Confirm yet</a>
+ <div class="vehicle_status"> Status: <a href="#" class="btn outline btn-xs">Not Confirm yet</a>
             <div class="clearfix"></div>
         </div>
                 <?php } ?>
-       <div style="float: left"><p><b>Message:</b> <?php echo htmlentities($result->message);?> </p></div>
               </li>
               <?php }} ?>
 
